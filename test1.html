@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5에서 등장한 시맨틱(semantic)태그의 의미</title>
+<!-- 
+ ※ HTML의 정의
+  - Hyper Text Mark-up Language 의 줄임말이다.
+  - 웹페이지 제작 언어이다.
+  - <  와  > 안에 정의된 용어로 태그(tag)를 표현하므로 mark-up 언어라고 부른다.
+  - HTML의 태그는 대소문자를 구분하지 않는다.
+  - <html> 태그로 시작해서 </html> 태그로 끝난다.
+  - <html>과 </html> 사이에 <head> ~ </head> 와 <body> ~ </body> 태그로 구성되어진다. 
+  - 모든 태그는 시작태그가 있으면, 끝 태그로 끝나는 것이 원칙이다.
+  - 우리가 배울 거의 대부분의 태그들이 <body> ~ </body> 사이에 기술된다.
+  - <head> ~ </head>사이에 들어가는 태그들은 몇 개 안 된다. 
+    (예) <style> 스타일시트 </style> 
+         <script> 자바스크립트 </script>
+         <title> 제목 </title> 등
+  - HTML의 주석문은 <!--    -- > 이다
+  
+ 
+ ※ 시맨틱(semantic)의 단어 뜻은 의미를 부여 했다는 뜻이다.
+  HTML5에서는 태그만 보고도 문서를 쉽게 이해 할 수 있도록 의미를 가지는 태그를 도입했다.
+  이것을 시맨틱 태그라한다.
+  
+  ※ 시맨틱(semantic) 태그의 종류
+  <header>, <nav>, <article>, <section>, <aside>, <footer> 등 
+  
+  1. <header> 태그는 
+   ==> 사이트 전체의 머리부분이 된다.
+   - <head>태그와의 차이점
+     <head>태그는 문서에서 단 한 번만 사용할수 있고 <header> 태그는 여러 번 사용할 수 있다.
+   - <head>태그는 <html> 태그 다음에 입력하나, <header> 태그는 주로 본문 즉 <body> 태그 안에서 사용한다. 
+  
+  2. <nav> 태그는 
+    ==> 네비게이션 표현을 위한 태그이다.
+    - <nav> 태그는 본문 위치에 영향을 받지 않는다. 
+      <header><footer><aside>중 어느 위치도 상관없다. 
+       즉, <body>태그 안에는 어디든지 사용할 수가 있다.
+       
+  3. <article> 태그는 
+    ==> 웹페이지 상에서의 실제 내용을 의미한다.
+    - article 태그는 포럼의 글이 될수도 있고, 잡지나 신문의 기사일 수도 있으며, 블로그의 글이나 사용자가 올린 의견 등이 될 수 있다.
+    - 하나의 문서 안에서 여러개의 article 태그가 올 수 있다.
+    
+  4. <section> 태그는
+     ==> 웹컨텐츠(내용)들을 그룹으로 묶어주는 역할을 담당한다.
+     <section> 태그는 테마별로 연관된 콘텐츠를 한데 묶어서 더 큰 논리적인 단위를 형성할 수 있도록 해준다.
+      하나의 페이지 안에서 주제가 다른 영역을 구분짓거나 하나의 글을 부분으로 나누고자 할때 사용하기도 한다. 
+     <section> 태그는 일반적으로 제목과(h) 함께 사용한다. 
+      스타일링이나 스크립트를 위해서 감싸는 요소가 필요하다면 문서 구조상 특별한 의미가 없는 <div>를 사용해야 한다. 
+      항상 section은 연관된 콘텐츠를 위해 사용하도록 하자.
+    
+  5. <aside> 태그는
+     ==> 웹컨텐츠 제작시 주 내용이 아닌 왼쪽이나 오른쪽에 부수적인 내용이 들어가는 부분을 <aside>태그로 표현한다
+           화면의 좌, 우측에 보여지는 컨텐츠(예: 목록, 날씨정보, 광고 등)를 포함하는 영역입니다.
+           
+  6. <footer> 태그는 
+      ==> 사이트의 하단부분을 구성하는 영역으로서 주로 웹사이트의 저작권 정보나 저작권표기와 같은 내용이 들어가는 부분이다.
+             
+       
+  
+ -->
+</head>
+
+<body>
+<section id=bestseller>
+
+<header>
+<h1> 베스트셀러 목록</h1>
+</header>
+
+<nav id=mainList>
+<ul>
+    <li><a href="https://ko.wikipedia.org/wiki/%EC%A0%9C3%EC%9D%98_%EB%AC%BC%EA%B2%B0_(%ED%86%A0%ED%94%8C%EB%9F%AC)">제3의 물결 </a></li>
+    <li><a href="#">개 미 </a></li>
+    <li><a href="#">다빈치 코드 </a></li>
+    <li><a href="#">해리포터시리즈 </a></li>
+</ul>
+</nav>
+
+<article>
+<p>제3의 물결 : 엘빈토플러 저</p>
+<p>개 미 : 베르나르 베르베르</p>
+<p>다빈치 코드 : 댄 브라운 </p>
+<p>해리포터시리즈 : 조엔 롤링</p>
+</article>
+
+</section>
+
+<aside>
+<h3>전체글 목록보기</h3>
+<ul>
+	<li><a href="#">HTML</a></li>
+	<li><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+</ul>
+</aside>
+
+<footer>
+  사이트 관리자 : 홍길동 &nbsp;&nbsp;&nbsp; email : hongkd@naver.com
+</footer>
+
+</body>
+</html>
